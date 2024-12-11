@@ -36,4 +36,9 @@ public class AdminportalController {
         }
         return "home";  // This is the login page or landing page
     }
+
+    @GetMapping(value = "/ssl-test")
+    public String inbound(){
+        return "Inbound TLS is working!!";
+    }
 }

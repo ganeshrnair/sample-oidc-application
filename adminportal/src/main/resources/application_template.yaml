@@ -20,3 +20,12 @@ logging:
   level:
     org.springframework.security: DEBUG
     org.springframework.web: DEBUG
+server:
+  ssl:
+    key-alias: adminportal-sslcert
+    key-store-type: AzureKeyVault
+    trust-store-type: AzureKeyVault
+  port: 8443
+azure:
+  keyvault:
+    uri: https://ganeshrnair-app-vault1.vault.azure.net/
