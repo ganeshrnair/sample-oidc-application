@@ -9,9 +9,10 @@ spring:
             client-id: <<>>>>
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/azure"
-            scope: openid, profile, email,ProfilePhoto.Read.All,User.Read,limitsapi.read
+            scope: openid,profile,email,ProfilePhoto.Read.All,User.Read,api://0eb346b3-9347-41f0-8fd6-137cc2d030e7/limitsapi.read
             client-name: Microsoft Entra ID
             issuer-uri: https://login.microsoftonline.com/<<>>>>/v2.0
+            audience: <<>>
         provider:
           azure:
             issuer-uri: https://login.microsoftonline.com/<<>>>>/v2.0
@@ -29,3 +30,5 @@ server:
 azure:
   keyvault:
     uri: https://ganeshrnair-app-vault1.vault.azure.net/
+limitsapi:
+  url: http://localhost:8081/api/dailylimit
