@@ -10,18 +10,9 @@ import java.util.List;
 @RequestMapping("/api")
 class LimitsapiController {
 
-    @GetMapping("/public")
-    public String publicEndpoint() {
-        return "This is a public endpoint and does not require authentication.";
-    }
-
-    @GetMapping("/secure")
-    public String secureEndpoint() {
+    @GetMapping("/dailylimit")
+    public String getDailyLimitForCustomers() {
         return "This is a secure endpoint and requires authentication.";
     }
 
-    @GetMapping("/admin")
-    public String adminEndpoint() {
-        return "This is an admin-only endpoint.";
-    }
 }
