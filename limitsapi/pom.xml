@@ -49,6 +49,12 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-oauth2-jose</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.azure.spring</groupId>
+			<artifactId>azure-spring-boot-starter-keyvault-certificates</artifactId>
+			<version>3.14.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

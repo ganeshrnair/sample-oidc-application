@@ -15,4 +15,11 @@ logging:
         security: TRACE
         web: DEBUG
 server:
-  port: 8081
+  ssl:
+    key-alias: limitsapi-ssl-cert
+    key-store-type: AzureKeyVault
+    trust-store-type: AzureKeyVault
+  port: 8444
+azure:
+  keyvault:
+    uri: https://ganeshrnair-app-vault1.vault.azure.net/
