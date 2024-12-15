@@ -6,12 +6,13 @@ spring:
       resourceserver:
           jwt:
             issuer-uri: https://login.microsoftonline.com/8c07552d-ec95-4eab-be2a-e9609b47a162/v2.0
+            audience: api://0eb346b3-9347-41f0-8fd6-137cc2d030e7
 
 logging:
   level:
     org:
       springframework:
-        security: DEBUG
+        security: TRACE
         web: DEBUG
 server:
   port: 8081
