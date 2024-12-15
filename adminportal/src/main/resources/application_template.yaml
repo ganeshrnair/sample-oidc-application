@@ -19,8 +19,10 @@ spring:
 
 logging:
   level:
-    org.springframework.security: DEBUG
-    org.springframework.web: DEBUG
+    org:
+      springframework:
+        security: DEBUG
+        web: DEBUG
 server:
   ssl:
     key-alias: adminportal-sslcert
