@@ -16,7 +16,7 @@ logging:
         web: DEBUG
 server:
   ssl:
-    key-alias: limitsapi-ssl-cert
+    key-alias: server2
     key-store-type: AzureKeyVault
     trust-store-type: AzureKeyVault
   port: 8444
