@@ -24,7 +24,7 @@ logging:
         web: DEBUG
 server:
   ssl:
-    key-alias: adminportal-sslcert
+    key-alias: server1
     key-store-type: AzureKeyVault
     trust-store-type: AzureKeyVault
   port: 8443
