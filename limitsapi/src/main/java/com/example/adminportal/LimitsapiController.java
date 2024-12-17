@@ -18,7 +18,7 @@ class LimitsapiController {
         String userId = jwt.getSubject(); // The "sub" claim
         String scopes = jwt.getClaim("scp");
 
-        return String.format("UserId: %s, Username: %s, Scopes: %s", userId, username, scopes);
+        return String.format("Username: %s, Scopes: %s", username, scopes);
 
     }
 
