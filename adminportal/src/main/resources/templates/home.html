@@ -23,16 +23,14 @@
     </style>
 </head>
 <body>
-<h1>Welcome, <span th:text="${fullName}">User</span></h1>
+<h1>Welcome, <span th:text="${name}">User</span></h1>
 
 <table>
     <tr>
         <td><img th:src="@{${pictureUrl}}" alt="User Picture" width="100" height="100"></td>
         <td>
             <p>User ID: <b><span th:text="${userId}">User ID</span></b></p>
-            <p>Given Name: <b><span th:text="${givenName}">Given Name</span></b></p>
-            <p>Family Name: <b><span th:text="${familyName}">Family Name</span></b></p>
-            <p>Email: <b><span th:text="${email}">Email</span></b></p>
+            <p>User Name: <b><span th:text="${username}">Given Name</span></b></p>
             <p>Maker Role: <b><span th:text="${makerRole}">No</span></b></p>
             <p>Checker Role: <b><span th:text="${checkerRole}">No</span></b></p>
             <p>Limits API Data: <b><span th:text="${dailyLimit}">No</span></b></p>

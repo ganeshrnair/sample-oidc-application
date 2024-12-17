@@ -11,6 +11,7 @@ import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
 import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.security.oauth2.core.oidc.OidcIdToken;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,12 +36,10 @@ public class AdminportalController {
     @GetMapping("/")
     public String index(@AuthenticationPrincipal OidcUser user, Model model) {
         // Retrieve user information from the OAuth2 token (Azure AD)
-        model.addAttribute("fullName", user.getUserInfo().getFullName());
-        model.addAttribute("email", user.getUserInfo().getEmail());
-        model.addAttribute("givenName", user.getUserInfo().getGivenName());
-        model.addAttribute("familyName", user.getUserInfo().getFamilyName());
-        model.addAttribute("pictureUrl", user.getUserInfo().getPicture());
-        model.addAttribute("userId", user.getUserInfo().getSubject());
+        model.addAttribute("name", user.getAttribute("name"));
+        model.addAttribute("username", user.getAttribute("preferred_username"));
+        model.addAttribute("userId", user.getAttribute("sub"));
+        //model.addAttribute("pictureUrl", user.getAttribute(""));
         model.addAttribute("makerRole", "No");
         model.addAttribute("checkerRole", "No");
 
